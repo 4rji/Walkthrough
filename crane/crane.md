@@ -111,6 +111,3 @@ netstat -antup | grep '127.0.0.1' --color=auto
 ##### <font color="red">[+]</font> I/O - PsPy<font color="red">:</font> 
 ```bash
 ```
-	[*] IP Address: 192.168.194.146
-	[*] Open ports: 22,80,3306,33060
- cat /home/ass/Documents/GitHub/4rji/4rjinotes/htb/crane/crane.md

@@ -1,0 +1,49 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+X-WR-CALNAME: Administrator (SugarCRM)
+PRODID:-//SugarCRM//SugarCRM Calendar//EN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:-0400
+DTSTART:20240310T110000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+DTSTART:20241103T110000
+END:STANDARD
+END:VTIMEZONE
+CALSCALE:GREGORIAN
+BEGIN:VTODO
+DTSTART;TZID=America/New_York:19700101T000000
+DTSTAMP:20240518T044500Z
+SUMMARY:Communicate with internal stakeholders
+UID:37b767ba-2d35-e7a5-e527-64e74535866d
+DESCRIPTION:Project:Create new plan for the annual audit\r\n\r\nSchedule individual meetings with Will\, Max\, and Sarah.
+URL;VALUE=URI:http://crane.offsec/index.php?module=ProjectTask&action=DetailView&record=37b767ba-2d35-e7a5-e527-64e74535866d
+PERCENT-COMPLETE:100
+END:VTODO
+BEGIN:VTODO
+DTSTART;TZID=America/New_York:19700101T000000
+DTSTAMP:20240518T044500Z
+SUMMARY:Create draft of the plan
+UID:3a887995-4bc5-785d-fa76-64e74532e133
+DESCRIPTION:Project:Create new plan for the annual audit\r\n\r\nStart new plan document\, including all of the information from the initial discussion meetings.
+URL;VALUE=URI:http://crane.offsec/index.php?module=ProjectTask&action=DetailView&record=3a887995-4bc5-785d-fa76-64e74532e133
+PERCENT-COMPLETE:38
+END:VTODO
+BEGIN:VTODO
+DTSTART;TZID=America/New_York:19700101T000000
+DTSTAMP:20240518T044500Z
+SUMMARY:Perform field studies to collect data
+UID:3ccc7d9e-1192-1271-3335-64e74583f315
+DESCRIPTION:Project:Create new plan for the annual audit\r\n\r\nObtain approval from all stakeholders of the plan.
+URL;VALUE=URI:http://crane.offsec/index.php?module=ProjectTask&action=DetailView&record=3ccc7d9e-1192-1271-3335-64e74583f315
+PERCENT-COMPLETE:75
+END:VTODO
+DTSTAMP:20240518T044500Z
+END:VCALENDAR

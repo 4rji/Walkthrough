@@ -1,6 +1,6 @@
-# Nmap 7.94SVN scan initiated Sat May 18 03:18:29 2024 as: nmap -sCV -p 22,80,3306,33060 -oN expo3 192.168.194.146
+# Nmap 7.94SVN scan initiated Sat May 18 03:43:47 2024 as: nmap -sCV -p 22,80,3306,33060 -oN expo3 192.168.194.146
 Nmap scan report for 192.168.194.146
-Host is up (0.52s latency).
+Host is up (0.50s latency).
 
 PORT      STATE SERVICE VERSION
 22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
@@ -9,15 +9,15 @@ PORT      STATE SERVICE VERSION
 |   256 b6:18:a1:e1:98:fb:6c:c6:87:55:45:10:c6:d4:45:b9 (ECDSA)
 |_  256 ab:8f:2d:e8:a2:04:e7:b7:65:d3:fe:5e:93:1e:03:67 (ED25519)
 80/tcp    open  http    Apache httpd 2.4.38 ((Debian))
-| http-cookie-flags: 
-|   /: 
-|     PHPSESSID: 
-|_      httponly flag not set
-|_http-server-header: Apache/2.4.38 (Debian)
 | http-robots.txt: 1 disallowed entry 
 |_/
 | http-title: SuiteCRM
 |_Requested resource was index.php?action=Login&module=Users
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
 3306/tcp  open  mysql   MySQL (unauthorized)
 33060/tcp open  mysqlx?
 | fingerprint-strings: 
@@ -31,7 +31,7 @@ PORT      STATE SERVICE VERSION
 |     Invalid message-frame."
 |_    HY000
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port33060-TCP:V=7.94SVN%I=7%D=5/18%Time=6648645D%P=x86_64-pc-linux-gnu%
+SF-Port33060-TCP:V=7.94SVN%I=7%D=5/18%Time=66486A4B%P=x86_64-pc-linux-gnu%
 SF:r(NULL,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(GenericLines,9,"\x05\0\0\0\x
 SF:0b\x08\x05\x1a\0")%r(GetRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(HTT
 SF:POptions,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(RTSPRequest,9,"\x05\0\0\0\
@@ -64,4 +64,4 @@ SF:x10\x88'\x1a\x0fInvalid\x20message\"\x05HY000");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May 18 03:19:28 2024 -- 1 IP address (1 host up) scanned in 59.17 seconds
+# Nmap done at Sat May 18 03:44:45 2024 -- 1 IP address (1 host up) scanned in 57.75 seconds
