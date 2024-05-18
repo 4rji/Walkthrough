@@ -1,0 +1,13 @@
+# Nmap 7.94SVN scan initiated Fri Mar 29 22:47:10 2024 as: nmap -sCV -p 22 -oN targeted 10.10.11.232
+Nmap scan report for 10.10.11.232
+Host is up (0.11s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 89:d7:39:34:58:a0:ea:a1:db:c1:3d:14:ec:5d:5a:92 (ECDSA)
+|_  256 b4:da:8d:af:65:9c:bb:f0:71:d5:13:50:ed:d8:11:30 (ED25519)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar 29 22:47:14 2024 -- 1 IP address (1 host up) scanned in 3.71 seconds
